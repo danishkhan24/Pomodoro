@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="565.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ChoiceBox fx:id="EditSavedShow" layoutX="103.0" layoutY="52.0" prefHeight="31.0" prefWidth="194.0" />
+      <Label layoutX="16.0" layoutY="52.0" prefHeight="31.0" prefWidth="92.0" text="Select Show" />
+      <Button layoutX="304.0" layoutY="52.0" mnemonicParsing="false" onAction="#LoadShowToEdit" prefHeight="31.0" prefWidth="85.0" text="Load" />
+      <TextField fx:id="ShowSegmentName" layoutX="104.0" layoutY="97.0" prefHeight="31.0" prefWidth="92.0" />
+      <Label layoutX="14.0" layoutY="97.0" prefHeight="31.0" prefWidth="92.0" text="Segment :" />
+      <Label layoutX="14.0" layoutY="142.0" text="Start Time" />
+      <TextField fx:id="SegmentStartTime" layoutX="104.0" layoutY="137.0" prefHeight="31.0" prefWidth="92.0" promptText="HH:MM::SS">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="218.0" layoutY="142.0" prefHeight="21.0" prefWidth="62.0" text="End Time" />
+      <TextField fx:id="SegmentEndTime" layoutX="293.0" layoutY="137.0" prefHeight="31.0" prefWidth="92.0" promptText="HH:MM:SS">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="20.0" layoutY="504.0" mnemonicParsing="false" onAction="#EditNewSegment" prefHeight="31.0" prefWidth="115.0" text="Add Segment" />
+      <Button layoutX="143.0" layoutY="183.0" mnemonicParsing="false" onAction="#SaveEditSegment" prefHeight="31.0" prefWidth="120.0" text="Save Segment" />
+      <Label layoutX="14.0" layoutY="345.0" prefHeight="54.0" prefWidth="226.0" text="To Add New Segment After the Current One Enter Details Below" wrapText="true" />
+      <Label layoutX="17.0" layoutY="464.0" text="Start Time" />
+      <TextField fx:id="TemptStartTime" layoutX="107.0" layoutY="459.0" prefHeight="31.0" prefWidth="80.0" promptText="HH:MM:SS">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="206.0" layoutY="464.0" prefHeight="21.0" prefWidth="62.0" text="End Time" />
+      <TextField fx:id="TempEndTime" layoutX="280.0" layoutY="459.0" prefHeight="31.0" prefWidth="80.0" promptText="HH:MM:SS">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TempSegName" layoutX="107.0" layoutY="413.0" prefHeight="31.0" prefWidth="80.0" />
+      <Label layoutX="17.0" layoutY="413.0" prefHeight="31.0" prefWidth="92.0" text="Segment :" />
+      <ListView fx:id="MyShowList" layoutX="19.0" layoutY="230.0" prefHeight="105.0" prefWidth="368.0" />
+      <Button layoutX="269.0" layoutY="183.0" mnemonicParsing="false" onAction="#NextSegment" prefHeight="31.0" prefWidth="120.0" text="Next Segment" />
+      <Button layoutX="15.0" layoutY="183.0" mnemonicParsing="false" onAction="#PrevSegment" prefHeight="31.0" prefWidth="120.0" text="Prev. Segment" />
+      <Button layoutX="274.0" layoutY="504.0" mnemonicParsing="false" onAction="#SaveEditedFile" prefHeight="31.0" prefWidth="115.0" text="Save Show" />
+      <Label layoutX="209.0" layoutY="97.0" prefHeight="31.0" prefWidth="80.0" text="Show Date" />
+      <Button layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#FillEditList" prefHeight="31.0" prefWidth="383.0" text="Refresh" />
+      <DatePicker fx:id="ShowDate" layoutX="289.0" layoutY="97.0" prefHeight="31.0" prefWidth="100.0" />
+      <Button layoutX="255.0" layoutY="345.0" mnemonicParsing="false" onAction="#DeleteEdit" prefHeight="31.0" prefWidth="132.0" text="Delete Segment" />
+   </children>
+</AnchorPane>
